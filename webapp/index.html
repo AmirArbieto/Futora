@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futora</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/futora.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/Styles.css">
+
+    <!-- Deshabilitar zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <script>
+        // Agrega aquí el script de la API de Orientación de pantalla
+        // Verificar si el navegador admite la API de Orientación de pantalla
+        if (screen.orientation && screen.orientation.lock) {
+          // Bloquear la orientación en horizontal
+          screen.orientation.lock('landscape').then(function() {
+            // La orientación se ha bloqueado con éxito
+          }).catch(function(error) {
+            // No se pudo bloquear la orientación
+            console.error('Error al bloquear la orientación:', error);
+          });
+        }
+    </script>
+
+</head>
+<body>
+    <div class="Contenedor">
+        <div class="Hojas">
+            <div>
+                <div>
+                    <div>
+                        <div class="Contenido">
+                            <div>
+                                <div class="Encabezado">
+                                    <div class="Logo">
+                                        <div>
+                                            <div>
+                                                <img src="img/Logo.png"><span>FUTORA</span>
+                                            </div>
+                                            <img src="img/btnAbrir.gif" id="btnAbrir" onclick="abrirMenu()">
+                                        </div>
+                                        <p>SISTEMATIZACIÓN PARA SIEMPRE</p>
+                                    </div>
+                            
+                                    <div class="Titulo">
+                                        <div>
+                                            <h1>MATRICULA</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Script.js"></script>
+</body>
+</html>

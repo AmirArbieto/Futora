@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+::placeholder {
+    color: black;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+input, select, option, button {
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    -webkit-appearance: none;  
+    -moz-appearance: none;  
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Estructuramos */
+.Contenedor {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Diseñamos las hojas sobresalientes */
+.Hojas {
+    margin: 2rem 0rem 0rem 2rem;
+}
+
+.Hojas > div,
+.Hojas > div > div,
+.Hojas > div > div > div {
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+    border-top: 1px solid #C6C6C6;
+    border-bottom: 1px solid #C6C6C6;
+    border-left: 1px solid #C6C6C6;
+    border-right: 1px solid #C6C6C6;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+
+    transform: translateY(-0.6rem) translateX(-0.6rem); /* Ajuste de posicionamiento con transform */
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Estructuramos el Encabezado */
+.Contenido {
+    padding: 2vw 2vw 0 2vw;
+}
+
+.Contenedor .Encabezado {
+    overflow: hidden;
+}
+
+.Encabezado {
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+
+    margin-bottom: 40PX;
+}
+
+#btnAbrir {
+    width: 15px;
+    cursor: pointer;
+}
+
+/* Diseñamos el titulo */
+.Titulo {
+    width: 100%;    
+    text-align: center;
+}
+
+.Titulo div h1 {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 10px;
+    font-size: 28PX;
+    font-weight: bold;
+    color: #FFAA4D;
+    padding: 5px;
+    
+    background-color: white;
+    border-bottom: 1px solid #C6C6C6;
+    border-right: 1px solid #C6C6C6; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------- */
+/* Estructuramos el menu */
+#MenuContenedor {
+    position: absolute;
+    display: none;
+}
+
+.Menu > div {
+    height: 100vh;
+    padding: 1rem 1.5rem 0rem 1rem;
+
+    overflow-x: auto; /* Mantenemos el overflow-x en auto */
+    
+    background-color: white;
+    border-right: 2px solid #C6C6C6;
+}
+
+/* Estilos de la barra de desplazamiento */
+.Menu > div::-webkit-scrollbar {
+    width: 0.5em; /* Establece el ancho de la barra de desplazamiento */
+}
+
+.Menu > div::-webkit-scrollbar-track {
+    background-color: transparent; /* Establece el color de fondo de la barra de desplazamiento */
+}
+
+.Menu > div::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Establece el color del pulgar de la barra de desplazamiento */
+}
+
+/* Estructuramos el logo */
+.Logo div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Logo div > div {
+    gap: 5px;
+}
+
+/* Diseñamos el logo */
+.Logo div > div img {
+    width: 30px;
+}
+
+#btnCerrar {
+    width: 15px;
+    cursor: pointer;
+}
+
+.Logo div div span {
+    font-size: 28px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #FFAA4D;
+}
+
+.Logo p {
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #F65275;
+    white-space: nowrap; /* Hace que la linea sea siempre recta y no se divida */
+}
+
+/* Diseñamos los botones */
+.Menubtn div img {
+    width: 25PX;
+}
+
+.Menubtn div {
+    display: flex;
+    align-items: center;
+
+    margin-top: 25px;
+    padding: 5px 10px;
+    gap: 10px;
+
+    cursor: pointer;
+    background: white;
+    border-bottom: 1px solid #C6C6C6;
+    border-right: 2px solid #C6C6C6;
+}
+
+.Menubtn div a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* Definimos el diseño en el celular horizontal */
+ 
+  
+@media screen and (max-width: 1370px) and (orientation: landscape) {
+ 
+}
+
+ 
+ 
+/* Definimos el diseño en el celular vertical */
+@media screen and (max-width: 920px) and (orientation: portrait) {
+ 
+}
+
