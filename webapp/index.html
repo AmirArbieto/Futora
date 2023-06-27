@@ -5,28 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Futora</title>
 
+    <!-- Deshabilitar zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/futora.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/Styles.css">
-
-    <!-- Deshabilitar zoom -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-    <script>
-        // Agrega aquí el script de la API de Orientación de pantalla
-        // Verificar si el navegador admite la API de Orientación de pantalla
-        if (screen.orientation && screen.orientation.lock) {
-          // Bloquear la orientación en horizontal
-          screen.orientation.lock('landscape').then(function() {
-            // La orientación se ha bloqueado con éxito
-          }).catch(function(error) {
-            // No se pudo bloquear la orientación
-            console.error('Error al bloquear la orientación:', error);
-          });
-        }
-    </script>
 
 </head>
 <body>
@@ -36,23 +22,93 @@
                 <div>
                     <div>
                         <div class="Contenido">
-                            <div>
-                                <div class="Encabezado">
-                                    <div class="Logo">
+                            <div class="Encabezado">
+                                <div class="Logo">
+                                    <div>
                                         <div>
-                                            <div>
-                                                <img src="img/Logo.png"><span>FUTORA</span>
+                                            <img src="img/Logo.png"><span>FUTORA</span>
+                                        </div>
+                                        <img src="img/btnAbrir.gif" id="btnAbrir" onclick="abrirMenu()">
+                                    </div>
+                                    <p>SISTEMATIZACIÓN PARA SIEMPRE</p>
+                                </div>
+                        
+                                <div class="Titulo">
+                                    <div>
+                                        <div><h1>INICIAR SESION</h1></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="Componente" style="display: flex;">
+                                <div class="FormularioLogin">
+                                    <form>
+                                        <div class="InicioUsuario">
+                                            <img src="img/InicioUsuario.png">
+                                        </div>
+
+                                        <div class="DosColumnas">
+                                            <div class="DiseñoCampos">
+                                                <div>
+                                                    <label for="frmDocument_type"></label>
+                                                    <select id="frmDocument_type" name="frmDocument_type">
+                                                        <option selected>Tipo de documento</option>
+                                                        <option value="DNI">DNI</option>
+                                                        <option value="CDE">CDE</option>
+                                                    </select>
+                                                    <span><img src="img/FlechaIzquierda.gif"></span>
+                                                </div>
+        
+                                                <div>
+                                                    <label for="frmPasswords"></label>
+                                                    <input type="password" id="frmPasswords" name="frmPasswords" placeholder="Contraseña">
+                                                </div>
+        
+                                                <div>
+                                                    <label for="frmInstitution_id"></label>
+                                                    <input type="text" id="frmInstitution_id" name="frmInstitution_id" placeholder="Código de instancia">
+                                                    <span><img src="img/Instancia.png"></span>
+                                                </div>
                                             </div>
-                                            <img src="img/btnAbrir.gif" id="btnAbrir" onclick="abrirMenu()">
+        
+                                            <div class="DiseñoCampos">
+                                                <div>
+                                                    <label for="frmDocument_number"></label>
+                                                    <input type="text" id="frmDocument_number" name="frmDocument_number" placeholder="Número de documento">
+                                                </div>
+        
+                                                <div>
+                                                    <label for="frmPasswords_confirm"></label>
+                                                    <input type="password" id="frmPasswords_confirm" name="frmPasswords_confirm" placeholder="Confirmar contraseña">
+                                                    <span><img src="img/OjoCerrado.png"></span>
+                                                </div>
+        
+                                                <div class="ProcesarColor">
+                                                    <button type="submit" id="frmLogin" name="frmLogin">Iniciar sesión</button>
+                                                    <span><img src="img/Lineas.png"></span>
+                                                </div>
+                                            </div>
+                                        </div>                                                                   
+                                    </form>
+                                    
+                                    <div class="TresColumnas">
+                                        <div class="DiseñoCampos">
+                                            <div class="ProcesarColor">
+                                                <button type="submit" id="frmCrearInstancia" name="frmCrearInstancia">Crear instancia</button>
+                                                <span><img src="img/Lineas.png"></span>
+                                            </div>
+                                          
+                                            <div class="ProcesarColor">
+                                                <button type="submit" id="frmRegistrarse" name="frmRegistrarse">Registrarse</button>
+                                                <span><img src="img/Lineas.png"></span>
+                                            </div>
+                                          
+                                            <div class="ProcesarColor">
+                                                <button type="submit" id="frmRecuperarContraseña" name="frmRecuperarContraseña">Recuperar contraseña</button>
+                                                <span><img src="img/Lineas.png"></span>
+                                            </div>
                                         </div>
-                                        <p>SISTEMATIZACIÓN PARA SIEMPRE</p>
-                                    </div>
-                            
-                                    <div class="Titulo">
-                                        <div>
-                                            <h1>MATRICULA</h1>
-                                        </div>
-                                    </div>
+                                    </div>   
                                 </div>
                             </div>
                         </div>
@@ -60,6 +116,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- Contenedor para el menú -->
+        <div id="MenuContenedor"></div>
     </div>
 
     <script src="js/Script.js"></script>
